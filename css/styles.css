@@ -756,6 +756,235 @@ body {
   color: var(--gold-light);
 }
 
+/* ===== Карусель 9:16 ===== */
+.carousel-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.carousel-settings {
+  position: sticky;
+  top: 90px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.format-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.format-btn {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(26, 74, 122, 0.3);
+  color: var(--text-light);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  transition: all 0.25s;
+}
+
+.format-btn:hover,
+.format-btn.active {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-light);
+}
+
+.format-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.carousel-themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.carousel-theme-btn {
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: rgba(26, 74, 122, 0.3);
+  color: var(--text-light);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  transition: all 0.25s;
+}
+
+.carousel-theme-btn:hover,
+.carousel-theme-btn.active {
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-light);
+}
+
+.photo-picks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.photo-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  background: rgba(6, 18, 32, 0.5);
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: inherit;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.photo-pick img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.photo-pick:hover,
+.photo-pick.active {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+.carousel-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+  border-left: 3px solid var(--gold);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.carousel-info strong {
+  color: var(--gold-light);
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.slides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.slide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.slide-preview-wrap {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  background: var(--blue-darkest);
+  transition: border-color 0.25s;
+}
+
+.slide-preview-wrap:hover {
+  border-color: var(--gold);
+}
+
+.slide-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.slide-label {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(6, 18, 32, 0.8);
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.slide-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.caption-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.caption-block h4 {
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.guide-num {
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: var(--blue-darkest);
+  font-weight: 700;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.guide-step strong {
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.guide-step p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 /* ===== Адаптив ===== */
 @media (max-width: 900px) {
   .hero {
@@ -775,6 +1004,15 @@ body {
 
   .generator-layout {
     grid-template-columns: 1fr;
+  }
+
+  .carousel-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-settings {
+    position: static;
+    max-height: none;
   }
 
   .stats-row {

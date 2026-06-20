@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карусель 9:16 — Контент-менеджер риэлтора</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="carousel-page">
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/profile.png" alt="Профиль" class="logo-icon">
+        <span class="logo-text">Контент<span>-менеджер</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="generator.html">Генератор</a></li>
+        <li><a href="carousel.html" class="active">Карусель</a></li>
+        <li><a href="templates.html">Шаблоны</a></li>
+        <li><a href="gallery.html">Фото</a></li>
+        <li><a href="calendar.html">Календарь</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="section-header">
+      <h2>🎠 Карусель & Stories 9:16</h2>
+      <p>Тема раскрывается за 9 слайдов — скачайте готовые картинки для Instagram, VK и Telegram</p>
+      <hr class="gold-line">
+    </div>
+
+    <div class="carousel-layout">
+      <div class="panel carousel-settings">
+        <h3 class="panel-title">Настройки карусели</h3>
+
+        <div class="form-group">
+          <label>Формат публикации</label>
+          <div class="format-tabs">
+            <button class="format-btn" data-format="carousel">📱 Карусель в ленте</button>
+            <button class="format-btn" data-format="stories">⚡ Stories</button>
+          </div>
+          <p id="format-hint" class="format-hint">Карусель: загрузите 9 слайдов как альбом в ленту Instagram или VK</p>
+        </div>
+
+        <div class="form-group">
+          <label>Тема (9 слайдов)</label>
+          <div class="carousel-themes">
+            <button class="carousel-theme-btn" data-theme="property">🏠 Объект</button>
+            <button class="carousel-theme-btn" data-theme="mistakes">⚠️ Ошибки</button>
+            <button class="carousel-theme-btn" data-theme="checklist">✅ Чек-лист</button>
+            <button class="carousel-theme-btn" data-theme="mortgage">🏦 Ипотека</button>
+            <button class="carousel-theme-btn" data-theme="story">📖 История</button>
+            <button class="carousel-theme-btn" data-theme="market">📊 Рынок</button>
+            <button class="carousel-theme-btn" data-theme="day">☀️ День риэлтора</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Фото для обложки и финала</label>
+          <div class="photo-picks">
+            <button class="photo-pick" data-photo="portrait"><img src="assets/images/portrait-beige.png" alt=""><span>Портрет</span></button>
+            <button class="photo-pick" data-photo="profile"><img src="assets/images/profile.png" alt=""><span>Аватар</span></button>
+            <button class="photo-pick" data-photo="beige"><img src="assets/images/gallery-beige.png" alt=""><span>Бежевый</span></button>
+            <button class="photo-pick" data-photo="black"><img src="assets/images/gallery-black.png" alt=""><span>Деловой</span></button>
+          </div>
+        </div>
+
+        <div id="carousel-fields"></div>
+
+        <div class="carousel-info">
+          <strong>Формат:</strong> 1080 × 1920 px (9:16)<br>
+          <strong>Слайдов:</strong> 9 — тема раскрывается от обложки до призыва
+        </div>
+      </div>
+
+      <div class="panel carousel-preview-panel">
+        <div class="preview-header">
+          <h3 class="panel-title" style="margin:0;border:none;padding:0;">Предпросмотр 9 слайдов</h3>
+          <button id="download-all" class="btn btn-primary btn-sm">⬇ Скачать все 9</button>
+        </div>
+
+        <div id="slides-grid" class="slides-grid"></div>
+
+        <div class="caption-block">
+          <h4>Текст для публикации</h4>
+          <div id="carousel-caption" class="output-box" style="min-height:100px;"></div>
+          <div id="carousel-hashtags" class="hashtags-box"></div>
+          <button id="copy-caption" class="btn btn-secondary" style="margin-top:1rem;">📋 Копировать текст + хештеги</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-guide panel" style="margin-top:2rem;">
+      <h3 class="panel-title">Как публиковать</h3>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <span class="guide-num">1</span>
+          <div>
+            <strong>Заполните поля</strong>
+            <p>Тема автоматически распределится по 9 слайдам — от зацепки до призыва к действию.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="guide-num">2</span>
+          <div>
+            <strong>Скачайте слайды</strong>
+            <p>Нажмите «Скачать все 9» — получите PNG 1080×1920 в формате 9:16.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="guide-num">3</span>
+          <div>
+            <strong>Карусель в ленте</strong>
+            <p>Instagram: «+» → выберите 9 фото по порядку → опубликуйте как карусель. VK: альбом из 9 изображений.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <span class="guide-num">4</span>
+          <div>
+            <strong>Stories</strong>
+            <p>Загрузите слайды по одному или используйте Canva/InShot для автоматической нарезки stories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <hr class="gold-line">
+    <p>Контент-менеджер риэлтора © 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>
