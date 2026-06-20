@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Календарь — Контент-менеджер риэлтора</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/profile.png" alt="Профиль" class="logo-icon">
+        <span class="logo-text">Контент<span>-менеджер</span></span>
+      </a>
+      <button class="menu-toggle" aria-label="Меню">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="generator.html">Генератор</a></li>
+        <li><a href="templates.html">Шаблоны</a></li>
+        <li><a href="gallery.html">Фото</a></li>
+        <li><a href="calendar.html" class="active">Календарь</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="section-header">
+      <h2>📅 Контент-календарь</h2>
+      <p>Оптимальный план публикаций на неделю для роста аудитории и привлечения клиентов</p>
+      <hr class="gold-line">
+    </div>
+
+    <div class="calendar-week">
+      <div class="calendar-day">
+        <div class="day-name">Понедельник</div>
+        <div class="day-content">
+          <span class="topic">💡 Экспертный совет</span>
+          <span class="topic">📱 Stories: утро</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">10:00 — полезный пост</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Вторник</div>
+        <div class="day-content">
+          <span class="topic">🎬 Reels</span>
+          <span class="topic">📱 Stories: офис</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">12:00 — видео</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Среда</div>
+        <div class="day-content">
+          <span class="topic">🏠 Объект</span>
+          <span class="topic">📱 Stories: показ</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">18:00 — новая квартира</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Четверг</div>
+        <div class="day-content">
+          <span class="topic">✅ Чек-лист</span>
+          <span class="topic">📱 Stories: опрос</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">11:00 — сохраняемый контент</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Пятница</div>
+        <div class="day-content">
+          <span class="topic">👤 Личный бренд</span>
+          <span class="topic">📱 Stories: итоги</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">19:00 — эмоциональный пост</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Суббота</div>
+        <div class="day-content">
+          <span class="topic">📊 Обзор рынка</span>
+          <span class="topic">📱 Stories: lifestyle</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">10:00 — аналитика</p>
+        </div>
+      </div>
+      <div class="calendar-day">
+        <div class="day-name">Воскресенье</div>
+        <div class="day-content">
+          <span class="topic">📖 История клиента</span>
+          <span class="topic">📱 Stories: отдых</span>
+          <p style="margin-top: 8px; font-size: 0.75rem;">15:00 — социальное доказательство</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-plan panel" style="margin-top: 2rem;">
+      <h3 class="panel-title">Детальный план на неделю</h3>
+      <ul id="content-plan" class="plan-list"></ul>
+    </div>
+
+    <div class="cards-grid" style="margin-top: 2rem;">
+      <div class="card">
+        <h3>⏰ Лучшее время</h3>
+        <p>Instagram: 10–12 и 18–21<br>VK: 12–14 и 19–22<br>Telegram: 8–10 и 17–19</p>
+      </div>
+      <div class="card">
+        <h3>📈 Формула роста</h3>
+        <p>40% польза + 30% объекты + 20% личное + 10% развлечение = стабильный поток заявок</p>
+      </div>
+      <div class="card">
+        <h3>🔄 Быстрый старт</h3>
+        <p>Откройте генератор, выберите тип по календарю, скопируйте текст и опубликуйте с фото из галереи.</p>
+        <a href="generator.html" class="btn btn-sm btn-primary" style="margin-top: 1rem;">Создать пост</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <hr class="gold-line">
+    <p>Контент-менеджер риэлтора © 2026</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
